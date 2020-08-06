@@ -1,9 +1,37 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import TodoApp from './TodoApp';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Grid from '@material-ui/core/Grid';
+import TodoList from './TodoList';
 
 const App = () => {
+  const initialTodos = [
+    {id: 1, task: "Study Redux", completed: false},
+    {id: 2, task: "Research for project", completed: true},
+    {id: 3, task: "Start project", completed: false}
+  ]
+
+  const [ todos, setTodos ] = useState(initialTodos)
+
   return (
-    <TodoApp/>
+    <Paper style={{
+      padding: 0,
+      margin: 0,
+      height: "100vh",
+      backgroundColor: "#fafafa"
+    }}
+    elevation={0}
+    >
+      <AppBar color='primary' position='static' style={{ height: "64px" }}>
+        <Toolbar>
+          <Typography color="inherit">TODOS WITH HOOKS</Typography>
+        </Toolbar>
+      </AppBar>
+      <TodoList todos={todos} />
+    </Paper>
   )
 }
 
