@@ -5,25 +5,28 @@ import List from '@material-ui/core/List';
 import Todo from './Todo';
 
 const TodoList = ({ removeTodo, todos, toggleTodo, editTodo }) => {
+  if (todos.length) 
   return (
     <Paper>
       <List>  
         {todos.map((todo, index) => (
         <>
           <Todo 
+            key={todo.id}
             id={todo.id}
             removeTodo={removeTodo}
             toggleTodo={toggleTodo}
             editTodo={editTodo}
             task={todo.task} 
             completed={todo.completed}  
-            key={todo.id} />
+            />
             {index < todos.length - 1 && <Divider/>}
         </>
         ))}
       </List>
     </Paper>
   )
+  return null;
 }
 
 export default TodoList;
