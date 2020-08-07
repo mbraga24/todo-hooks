@@ -23,5 +23,4 @@ const Todo = ({ task, completed }) => {
     </ListItem>
   )
 }
-
 export default Todo;
