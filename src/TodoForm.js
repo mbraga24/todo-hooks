@@ -19,7 +19,8 @@ const TodoForm = ({ addToDo }) => {
         <TextField 
           value={value} 
           onChange={handleChange} 
-          labe="Add New Todo"
+          label="Add New Todo"
+          margin="normal"
           fullWidth
           />
       </Paper>

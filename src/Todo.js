@@ -27,7 +27,7 @@ const Todo = ({ id, task, completed, removeTodo, toggleTodo, editTodo }) => {
 
   return (
 
-    <ListItem>
+    <ListItem style={{ height: "64px"}}>
       
       { isEditing ? <EditTodoForm 
                       editTodo={editTodo} 

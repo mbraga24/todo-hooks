@@ -17,11 +17,12 @@ const EditTodoForm = ({ id, task, editTodo, toggleEditForm }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{marginLeft: "1rem", width: "50%"}}>
       <TextField 
       value={value} 
       onChange={handleChange} 
       fullWidth
+      autoFocus
       />
     </form>
   )
